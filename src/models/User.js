@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema({
     email: {type: String, unique: true, required: true, min: 3 , max: 200},
     password: {type: String, unique: true, required: true, min: 3 , max: 200},
     applications: {type: mongoose.Schema.Types.ObjectId, min: 3 , max: 200},
-    createdUser: {type: Date, default: Date.now()},
+    createdDate: {type: Date, default: Date.now()},
     age: {type: String, required:true}
 });
 
