@@ -9,7 +9,7 @@ export default async function ControllerUser(req, res){
                 const userSelected = await userModel.findOne({_id: id});
                 const authorization = jwt.verify(req.body.token, process.env.SECRET_TOKEN);
                 if(userSelected._id != authorization._id) return res.status(403).send('Não possui autorização');
-                await userModel.findOneUpdate({email: userSelected.email},{$set: {
+                await userModel.findOneAndUpdate({email: userSelected.email},{$set: {
                     name: req.body.name,
                     age: req.body.age,
                     email: req.body.email,

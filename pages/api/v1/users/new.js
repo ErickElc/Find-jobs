@@ -10,7 +10,6 @@ export default async function createUser(req, res){
     const cryptPassword = bscrypt.hashSync(req.body.password, saltKey);
     const userRegister = new userModel({
         name: req.body.name,
-        age: req.body.age,
         email: req.body.email,
         password: cryptPassword,
     });
