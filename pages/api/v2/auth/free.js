@@ -13,5 +13,5 @@ export default async function AuthController(req, res){
             } catch (error) {
                 res.status(403).send('Access denied');
             }
-    }
+    };
 }

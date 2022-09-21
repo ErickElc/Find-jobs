@@ -14,3 +14,19 @@ export const HeaderComponent = styled.header`
     color: #E7F6F2;
     padding: 1rem;
 `;
+
+export const ContainerForm = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
+
+export const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 1px 5px 0px #676767;
+`
